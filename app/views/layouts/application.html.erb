@@ -18,7 +18,7 @@
         <li><%= link_to "About", about_path %></li>
       </ul>
 
-      <p class="sign_in">User Login</p>
+      <p class="sign_in"><%= link_to "User Login", new_user_session_path %></p>
     </div>
 
     <div id="main_content">
@@ -32,7 +32,7 @@
         <% end %>   
         <div class="buttons">
           <button class="button"><%= link_to "New Post", new_post_path %></button>
-          <button class="button">Log Out</button>
+          <button class="button"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></button>
         </div>
       </div>
       
